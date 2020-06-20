@@ -1,0 +1,357 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  data:
+    index.html: |
+      200 OK
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2020-02-05T03:10:43Z"
+    name: ingress-200
+    namespace: default
+    resourceVersion: "3865060"
+    selfLink: /api/v1/namespaces/default/configmaps/ingress-200
+    uid: 808d03dd-faa1-4c05-af47-389cb771c1ab
+- apiVersion: v1
+  data:
+    kubeconfig: |
+      apiVersion: v1
+      clusters:
+      - cluster:
+          certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJd01ERXdOVEF5TXpZeE1sb1hEVE13TURFd01qQXlNell4TWxvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBUDNoCmJoTUE2cm9uaUlMWHdrbWxDN0tnN25JZWdBYVZCais2Rzl0c0w0TVpnMWVPMWhzbzhtMGtqeU1VaVh6dnduNUIKOGQ0QlF0ZFZydDhwSEROZzRZWkdVSC92djhwNFpsT0VwQ2J5N0hwdWsyVnF4am5salR0c2Z2L2V2THA1OFlHVgpVVlZONHRqOVh4a1B0VmgxWTREZDMrQUh5c2kwL3NLMU0vQ21STGgvemIxN3QvQ1ZEbklodGhiRTJkeUJ0YVBNCkg4dnZxVlV2djltMjFKeXpKZ05TWGtkeXZ1U25uOVFqK2ZsTllMVE1udkpZdlFkaFdocTZhUXNVS2pqK3krdzMKdEhwdGc2dTIzMXJvMmIzeWhrNW41UlVDT2FrQ2J1eTdGYmpwNDFUQWZUbS9SOVd6RmdhU1dydkJ1K2RUWVVYSQp3SGpLRUU1dzYyUWJvTlRrY0pFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFCRWxLVnhEdXMxNWI0bktkM2w5QktXWXF6S3oKeXdzdkltYXlrSkx5Q3JkanQ1YjU2OFZHc01pc0kvUVgzYzVOaUFRcHhyTlVJc0VDVFVtK093ZUlMd1g4d1V4aApERDdvNkJJQ1BaS2FHbzV1bTJkc0NZQ01jOVNWNHozckFFTHJOaTBZd2FtTEgvOUxYV21WTE1qZEROMXp1UDMxCkJuTEFwQVUrY2hrQVNBWHo5SGxlaUoxdm9Xd0QrMHUvZU5YdmExMFFTakRqY0I5dHU5S3Y4R2x5Kys4L3FVSUgKNWV4L0k3bU9SRnl5eFVtSzh5MjBKdnBMbm0vd295M3Uxcy9DNXFzcjM3ZFJQQWdrNFFLbEIzTm1EUHRRSzBHTwpkNm96SE5IUGVScTY2SVdVUDBkL3hteEFRb1lBMWFFUWkzaGJMM0RNVnlpczRhakZyUnRiSElIYy9tdz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+          server: https://192.168.122.10:6443
+        name: ""
+      contexts: []
+      current-context: ""
+      kind: Config
+      preferences: {}
+      users: []
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2020-01-05T02:36:57Z"
+    name: cluster-info
+    namespace: kube-public
+    resourceVersion: "114756"
+    selfLink: /api/v1/namespaces/kube-public/configmaps/cluster-info
+    uid: a2bd289d-ebd8-4666-a717-c5749f6b8b26
+- apiVersion: v1
+  data:
+    Corefile: |
+      .:53 {
+          errors
+          health
+          ready
+          kubernetes cluster.local in-addr.arpa ip6.arpa {
+             pods insecure
+             fallthrough in-addr.arpa ip6.arpa
+             ttl 30
+          }
+          prometheus :9153
+          forward . /etc/resolv.conf
+          cache 30
+          loop
+          reload
+          loadbalance
+      }
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2020-01-05T02:36:57Z"
+    name: coredns
+    namespace: kube-system
+    resourceVersion: "198"
+    selfLink: /api/v1/namespaces/kube-system/configmaps/coredns
+    uid: 2b444f0c-b1d5-4024-bbc5-40f624045e54
+- apiVersion: v1
+  data:
+    client-ca-file: |
+      -----BEGIN CERTIFICATE-----
+      MIICyDCCAbCgAwIBAgIBADANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDEwprdWJl
+      cm5ldGVzMB4XDTIwMDEwNTAyMzYxMloXDTMwMDEwMjAyMzYxMlowFTETMBEGA1UE
+      AxMKa3ViZXJuZXRlczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAP3h
+      bhMA6roniILXwkmlC7Kg7nIegAaVBj+6G9tsL4MZg1eO1hso8m0kjyMUiXzvwn5B
+      8d4BQtdVrt8pHDNg4YZGUH/vv8p4ZlOEpCby7Hpuk2VqxjnljTtsfv/evLp58YGV
+      UVVN4tj9XxkPtVh1Y4Dd3+AHysi0/sK1M/CmRLh/zb17t/CVDnIhthbE2dyBtaPM
+      H8vvqVUvv9m21JyzJgNSXkdyvuSnn9Qj+flNYLTMnvJYvQdhWhq6aQsUKjj+y+w3
+      tHptg6u231ro2b3yhk5n5RUCOakCbuy7Fbjp41TAfTm/R9WzFgaSWrvBu+dTYUXI
+      wHjKEE5w62QboNTkcJECAwEAAaMjMCEwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB
+      /wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBABElKVxDus15b4nKd3l9BKWYqzKz
+      ywsvImaykJLyCrdjt5b568VGsMisI/QX3c5NiAQpxrNUIsECTUm+OweILwX8wUxh
+      DD7o6BICPZKaGo5um2dsCYCMc9SV4z3rAELrNi0YwamLH/9LXWmVLMjdDN1zuP31
+      BnLApAU+chkASAXz9HleiJ1voWwD+0u/eNXva10QSjDjcB9tu9Kv8Gly++8/qUIH
+      5ex/I7mORFyyxUmK8y20JvpLnm/woy3u1s/C5qsr37dRPAgk4QKlB3NmDPtQK0GO
+      d6ozHNHPeRq66IWUP0d/xmxAQoYA1aEQi3hbL3DMVyis4ajFrRtbHIHc/mw=
+      -----END CERTIFICATE-----
+    requestheader-allowed-names: '["front-proxy-client"]'
+    requestheader-client-ca-file: |
+      -----BEGIN CERTIFICATE-----
+      MIIC0DCCAbigAwIBAgIBADANBgkqhkiG9w0BAQsFADAZMRcwFQYDVQQDEw5mcm9u
+      dC1wcm94eS1jYTAeFw0yMDAxMDUwMjM2MTRaFw0zMDAxMDIwMjM2MTRaMBkxFzAV
+      BgNVBAMTDmZyb250LXByb3h5LWNhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+      CgKCAQEA4THlMux4J0PIxIrEsjWb6ZKinWvgWa8kWZA0NyJmjbGlh+/XdhqrOV9S
+      8iqYHFCsjCWRIeSD0FcuTNooXhI4WHNnweXDo+J4PFl97rDhID6HevtTD1wMGn7c
+      RGS95OgJKaUq/O0B+rrNeDYN9rZqGbM1AaOZ1Je/DWow1lhw3BRqiPbHxQPV7vgj
+      AFs6TrCblJMAXGZo8MY70B1sXNpdSaqrgjW3EtPlOqWTAi3Owr/BEEG9vxRqbhf+
+      a4ttiEmaAhYNPLaJV/Hi5lmBT0MJ7elc5Zn1Bj8R6ox2W8ZqZF2NfkRCuqkgjYih
+      9/6T8cooJhPq7uLZPrUmUjed/ZVgvQIDAQABoyMwITAOBgNVHQ8BAf8EBAMCAqQw
+      DwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAh4hut1XngCjaWiH0
+      oL3ZlvB6XbVmxW/30mgXwjkTWp7+eF+CKQzzS7Mmm89Pr9aZv+r8A+8wO01/C6AA
+      IwPSRk88CDroxIRwyHxKVQvM98pFLT+7ObzWwcdke0ssnTOOLUqmXvZ5d3niVEJe
+      zx2rgAArQNZK4u/Zu86mauxul12FbojGgfnCWMA5PWKyf+p02ZeaO73f35FnWpJd
+      /yZTivdfbzkU7X79K2lkMPy2PpQCq2nnMEc7Z6OrjBlKtpddBB4XFa9a6olR8iO8
+      4UXvig/yxd1/B/Iderw9ECKPpRNptEyZjRop9ckYKqsFbZMJys/5VI8U75siab+K
+      AOHlbg==
+      -----END CERTIFICATE-----
+    requestheader-extra-headers-prefix: '["X-Remote-Extra-"]'
+    requestheader-group-headers: '["X-Remote-Group"]'
+    requestheader-username-headers: '["X-Remote-User"]'
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2020-01-05T02:36:53Z"
+    name: extension-apiserver-authentication
+    namespace: kube-system
+    resourceVersion: "41"
+    selfLink: /api/v1/namespaces/kube-system/configmaps/extension-apiserver-authentication
+    uid: 65bcf627-12bf-4c1a-a159-112eb92ebab9
+- apiVersion: v1
+  data:
+    cni-conf.json: |
+      {
+        "cniVersion": "0.2.0",
+        "name": "cbr0",
+        "plugins": [
+          {
+            "type": "flannel",
+            "delegate": {
+              "hairpinMode": true,
+              "isDefaultGateway": true
+            }
+          },
+          {
+            "type": "portmap",
+            "capabilities": {
+              "portMappings": true
+            }
+          }
+        ]
+      }
+    net-conf.json: |
+      {
+        "Network": "10.244.0.0/16",
+        "Backend": {
+          "Type": "vxlan"
+        }
+      }
+  kind: ConfigMap
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","data":{"cni-conf.json":"{\n  \"cniVersion\": \"0.2.0\",\n  \"name\": \"cbr0\",\n  \"plugins\": [\n    {\n      \"type\": \"flannel\",\n      \"delegate\": {\n        \"hairpinMode\": true,\n        \"isDefaultGateway\": true\n      }\n    },\n    {\n      \"type\": \"portmap\",\n      \"capabilities\": {\n        \"portMappings\": true\n      }\n    }\n  ]\n}\n","net-conf.json":"{\n  \"Network\": \"10.244.0.0/16\",\n  \"Backend\": {\n    \"Type\": \"vxlan\"\n  }\n}\n"},"kind":"ConfigMap","metadata":{"annotations":{},"labels":{"app":"flannel","tier":"node"},"name":"kube-flannel-cfg","namespace":"kube-system"}}
+    creationTimestamp: "2020-01-05T02:37:56Z"
+    labels:
+      app: flannel
+      tier: node
+    name: kube-flannel-cfg
+    namespace: kube-system
+    resourceVersion: "434"
+    selfLink: /api/v1/namespaces/kube-system/configmaps/kube-flannel-cfg
+    uid: 840faeed-033e-4eef-a920-7c8ee52b43a9
+- apiVersion: v1
+  data:
+    config.conf: |-
+      apiVersion: kubeproxy.config.k8s.io/v1alpha1
+      bindAddress: 0.0.0.0
+      clientConnection:
+        acceptContentTypes: ""
+        burst: 10
+        contentType: application/vnd.kubernetes.protobuf
+        kubeconfig: /var/lib/kube-proxy/kubeconfig.conf
+        qps: 5
+      clusterCIDR: 10.244.0.0/16
+      configSyncPeriod: 15m0s
+      conntrack:
+        maxPerCore: 32768
+        min: 131072
+        tcpCloseWaitTimeout: 1h0m0s
+        tcpEstablishedTimeout: 24h0m0s
+      enableProfiling: false
+      healthzBindAddress: 0.0.0.0:10256
+      hostnameOverride: ""
+      iptables:
+        masqueradeAll: false
+        masqueradeBit: 14
+        minSyncPeriod: 0s
+        syncPeriod: 30s
+      ipvs:
+        excludeCIDRs: null
+        minSyncPeriod: 0s
+        scheduler: ""
+        strictARP: false
+        syncPeriod: 30s
+      kind: KubeProxyConfiguration
+      metricsBindAddress: 127.0.0.1:10249
+      mode: ""
+      nodePortAddresses: null
+      oomScoreAdj: -999
+      portRange: ""
+      udpIdleTimeout: 250ms
+      winkernel:
+        enableDSR: false
+        networkName: ""
+        sourceVip: ""
+    kubeconfig.conf: |-
+      apiVersion: v1
+      kind: Config
+      clusters:
+      - cluster:
+          certificate-authority: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+          server: https://192.168.122.10:6443
+        name: default
+      contexts:
+      - context:
+          cluster: default
+          namespace: default
+          user: default
+        name: default
+      current-context: default
+      users:
+      - name: default
+        user:
+          tokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2020-01-05T02:36:58Z"
+    labels:
+      app: kube-proxy
+    name: kube-proxy
+    namespace: kube-system
+    resourceVersion: "218"
+    selfLink: /api/v1/namespaces/kube-system/configmaps/kube-proxy
+    uid: 7deb021c-3220-4505-857b-cda5bb74ebfd
+- apiVersion: v1
+  data:
+    ClusterConfiguration: |
+      apiServer:
+        extraArgs:
+          authorization-mode: Node,RBAC
+        timeoutForControlPlane: 4m0s
+      apiVersion: kubeadm.k8s.io/v1beta2
+      certificatesDir: /etc/kubernetes/pki
+      clusterName: kubernetes
+      controllerManager: {}
+      dns:
+        type: CoreDNS
+      etcd:
+        local:
+          dataDir: /var/lib/etcd
+      imageRepository: k8s.gcr.io
+      kind: ClusterConfiguration
+      kubernetesVersion: v1.16.0
+      networking:
+        dnsDomain: cluster.local
+        podSubnet: 10.244.0.0/16
+        serviceSubnet: 10.96.0.0/12
+      scheduler: {}
+    ClusterStatus: |
+      apiEndpoints:
+        master:
+          advertiseAddress: 192.168.122.10
+          bindPort: 6443
+      apiVersion: kubeadm.k8s.io/v1beta2
+      kind: ClusterStatus
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2020-01-05T02:36:56Z"
+    name: kubeadm-config
+    namespace: kube-system
+    resourceVersion: "155"
+    selfLink: /api/v1/namespaces/kube-system/configmaps/kubeadm-config
+    uid: 99bf4230-432e-4bba-81d5-39ea8586bd06
+- apiVersion: v1
+  data:
+    kubelet: |
+      address: 0.0.0.0
+      apiVersion: kubelet.config.k8s.io/v1beta1
+      authentication:
+        anonymous:
+          enabled: false
+        webhook:
+          cacheTTL: 2m0s
+          enabled: true
+        x509:
+          clientCAFile: /etc/kubernetes/pki/ca.crt
+      authorization:
+        mode: Webhook
+        webhook:
+          cacheAuthorizedTTL: 5m0s
+          cacheUnauthorizedTTL: 30s
+      cgroupDriver: cgroupfs
+      cgroupsPerQOS: true
+      clusterDNS:
+      - 10.96.0.10
+      clusterDomain: cluster.local
+      configMapAndSecretChangeDetectionStrategy: Watch
+      containerLogMaxFiles: 5
+      containerLogMaxSize: 10Mi
+      contentType: application/vnd.kubernetes.protobuf
+      cpuCFSQuota: true
+      cpuCFSQuotaPeriod: 100ms
+      cpuManagerPolicy: none
+      cpuManagerReconcilePeriod: 10s
+      enableControllerAttachDetach: true
+      enableDebuggingHandlers: true
+      enforceNodeAllocatable:
+      - pods
+      eventBurst: 10
+      eventRecordQPS: 5
+      evictionHard:
+        imagefs.available: 15%
+        memory.available: 100Mi
+        nodefs.available: 10%
+        nodefs.inodesFree: 5%
+      evictionPressureTransitionPeriod: 5m0s
+      failSwapOn: true
+      fileCheckFrequency: 20s
+      hairpinMode: promiscuous-bridge
+      healthzBindAddress: 127.0.0.1
+      healthzPort: 10248
+      httpCheckFrequency: 20s
+      imageGCHighThresholdPercent: 85
+      imageGCLowThresholdPercent: 80
+      imageMinimumGCAge: 2m0s
+      iptablesDropBit: 15
+      iptablesMasqueradeBit: 14
+      kind: KubeletConfiguration
+      kubeAPIBurst: 10
+      kubeAPIQPS: 5
+      makeIPTablesUtilChains: true
+      maxOpenFiles: 1000000
+      maxPods: 110
+      nodeLeaseDurationSeconds: 40
+      nodeStatusReportFrequency: 1m0s
+      nodeStatusUpdateFrequency: 10s
+      oomScoreAdj: -999
+      podPidsLimit: -1
+      port: 10250
+      registryBurst: 10
+      registryPullQPS: 5
+      resolvConf: /etc/resolv.conf
+      rotateCertificates: true
+      runtimeRequestTimeout: 2m0s
+      serializeImagePulls: true
+      staticPodPath: /etc/kubernetes/manifests
+      streamingConnectionIdleTimeout: 4h0m0s
+      syncFrequency: 1m0s
+      topologyManagerPolicy: none
+      volumeStatsAggPeriod: 1m0s
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2020-01-05T02:36:56Z"
+    name: kubelet-config-1.16
+    namespace: kube-system
+    resourceVersion: "158"
+    selfLink: /api/v1/namespaces/kube-system/configmaps/kubelet-config-1.16
+    uid: 92663003-3306-4f56-aef0-38f2738af84e
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: lumpy-koala
+spec:
+  restartPolicy: Never
+  initContainers:
+  - name: init
+    image: busybox
+    command: ['sh', '-c', 'touch /workdir/calm.txt']
+    volumeMounts:
+    - name: vol
+      mountPath: /workdir
+  containers:
+  - name: lumpy-koala
+    image: busybox
+    command: ['sh', '-c', 'if [ -f /workdir/calm.txt ]; then echo Lumpy Koala && while true; do sleep 3000; done fi']
+    volumeMounts:
+    - name: vol
+      mountPath: /workdir
+  volumes:
+  - name: vol
+    emptyDir: {}

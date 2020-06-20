@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-kusc00102
+  labels:
+     disk: spinning
+spec:
+  restartPolicy: Never
+  containers:
+  - name: nginx
+    image: nginx
+  nodeSelector:
+    disk: spinning        

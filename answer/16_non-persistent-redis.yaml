@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: non-persistent-redis
+  labels:
+     tasks: non-persistent
+spec:
+  containers:
+  - name: redis
+    image: redis
+    volumeMounts:
+    - name: cache-control
+      mountPath: /data/redis
+  volumes:
+  - name: cache-control
+    emptyDir: {}
+      

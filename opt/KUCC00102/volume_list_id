@@ -1,0 +1,8 @@
+NAME               CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   REASON   AGE
+confident-wilson   1Gi        RWO            Recycle          Available                                   150d
+fervent-torvalds   2Gi        RWO            Recycle          Available                                   150d
+infallible-cerf    3Gi        RWO            Recycle          Available                                   150d
+vigorous-fermat    4Gi        RWO            Recycle          Available                                   150d
+youthful-spence    5Gi        RWO            Recycle          Available                                   150d
+trusting-wozniak   6Gi        RWO            Recycle          Available                                   150d
+nervous-swanson    7Gi        RWO            Recycle          Available                                   150d

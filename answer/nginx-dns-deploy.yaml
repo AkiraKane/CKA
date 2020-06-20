@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-dns
+  namespace: default
+  labels:
+    app: nginx-dns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-dns
+  template:
+    metadata:
+      labels:
+        app: nginx-dns
+      name: nginx-dns
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
