@@ -1,0 +1,195 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"PersistentVolume","metadata":{"annotations":{},"labels":{"id":"1"},"name":"confident-wilson"},"spec":{"accessModes":["ReadWriteOnce"],"capacity":{"storage":"1Gi"},"hostPath":{"path":"/confident-wilson"},"persistentVolumeReclaimPolicy":"Recycle","volumeMode":"Filesystem"}}
+    creationTimestamp: "2020-01-20T07:09:46Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    labels:
+      id: "1"
+    name: confident-wilson
+    resourceVersion: "1863637"
+    selfLink: /api/v1/persistentvolumes/confident-wilson
+    uid: 1cd27951-9554-4d5d-b397-38aa78aad64c
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 1Gi
+    hostPath:
+      path: /confident-wilson
+      type: ""
+    persistentVolumeReclaimPolicy: Recycle
+    volumeMode: Filesystem
+  status:
+    phase: Available
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"PersistentVolume","metadata":{"annotations":{},"labels":{"id":"2"},"name":"fervent-torvalds"},"spec":{"accessModes":["ReadWriteOnce"],"capacity":{"storage":"2Gi"},"hostPath":{"path":"/fervent-torvalds"},"persistentVolumeReclaimPolicy":"Recycle","volumeMode":"Filesystem"}}
+    creationTimestamp: "2020-01-20T07:09:46Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    labels:
+      id: "2"
+    name: fervent-torvalds
+    resourceVersion: "1863640"
+    selfLink: /api/v1/persistentvolumes/fervent-torvalds
+    uid: 2bcf200f-d8b9-4787-aa3c-6599e3082b60
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 2Gi
+    hostPath:
+      path: /fervent-torvalds
+      type: ""
+    persistentVolumeReclaimPolicy: Recycle
+    volumeMode: Filesystem
+  status:
+    phase: Available
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"PersistentVolume","metadata":{"annotations":{},"labels":{"id":"3"},"name":"infallible-cerf"},"spec":{"accessModes":["ReadWriteOnce"],"capacity":{"storage":"3Gi"},"hostPath":{"path":"/infallible-cerf"},"persistentVolumeReclaimPolicy":"Recycle","volumeMode":"Filesystem"}}
+    creationTimestamp: "2020-01-20T07:09:46Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    labels:
+      id: "3"
+    name: infallible-cerf
+    resourceVersion: "1863641"
+    selfLink: /api/v1/persistentvolumes/infallible-cerf
+    uid: 5b5ab2a9-b422-4632-82e8-be62a5e819d1
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 3Gi
+    hostPath:
+      path: /infallible-cerf
+      type: ""
+    persistentVolumeReclaimPolicy: Recycle
+    volumeMode: Filesystem
+  status:
+    phase: Available
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"PersistentVolume","metadata":{"annotations":{},"labels":{"id":"7"},"name":"nervous-swanson"},"spec":{"accessModes":["ReadWriteOnce"],"capacity":{"storage":"7Gi"},"hostPath":{"path":"/nervous-swanson"},"persistentVolumeReclaimPolicy":"Recycle","volumeMode":"Filesystem"}}
+    creationTimestamp: "2020-01-20T07:09:47Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    labels:
+      id: "7"
+    name: nervous-swanson
+    resourceVersion: "1863649"
+    selfLink: /api/v1/persistentvolumes/nervous-swanson
+    uid: 55af0fbb-33e8-4cfc-9a5f-fb9e0a9af711
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 7Gi
+    hostPath:
+      path: /nervous-swanson
+      type: ""
+    persistentVolumeReclaimPolicy: Recycle
+    volumeMode: Filesystem
+  status:
+    phase: Available
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"PersistentVolume","metadata":{"annotations":{},"labels":{"id":"6"},"name":"trusting-wozniak"},"spec":{"accessModes":["ReadWriteOnce"],"capacity":{"storage":"6Gi"},"hostPath":{"path":"/trusting-wozniak"},"persistentVolumeReclaimPolicy":"Recycle","volumeMode":"Filesystem"}}
+    creationTimestamp: "2020-01-20T07:09:47Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    labels:
+      id: "6"
+    name: trusting-wozniak
+    resourceVersion: "1863647"
+    selfLink: /api/v1/persistentvolumes/trusting-wozniak
+    uid: 04c4afc3-a463-45fa-9c6e-02eca63b99bb
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 6Gi
+    hostPath:
+      path: /trusting-wozniak
+      type: ""
+    persistentVolumeReclaimPolicy: Recycle
+    volumeMode: Filesystem
+  status:
+    phase: Available
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"PersistentVolume","metadata":{"annotations":{},"labels":{"id":"4"},"name":"vigorous-fermat"},"spec":{"accessModes":["ReadWriteOnce"],"capacity":{"storage":"4Gi"},"hostPath":{"path":"/vigorous-fermat"},"persistentVolumeReclaimPolicy":"Recycle","volumeMode":"Filesystem"}}
+    creationTimestamp: "2020-01-20T07:09:46Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    labels:
+      id: "4"
+    name: vigorous-fermat
+    resourceVersion: "1863643"
+    selfLink: /api/v1/persistentvolumes/vigorous-fermat
+    uid: b52430cf-0b07-4605-bd7b-85b806c04019
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 4Gi
+    hostPath:
+      path: /vigorous-fermat
+      type: ""
+    persistentVolumeReclaimPolicy: Recycle
+    volumeMode: Filesystem
+  status:
+    phase: Available
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"PersistentVolume","metadata":{"annotations":{},"labels":{"id":"5"},"name":"youthful-spence"},"spec":{"accessModes":["ReadWriteOnce"],"capacity":{"storage":"5Gi"},"hostPath":{"path":"/youthful-spence"},"persistentVolumeReclaimPolicy":"Recycle","volumeMode":"Filesystem"}}
+    creationTimestamp: "2020-01-20T07:09:47Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    labels:
+      id: "5"
+    name: youthful-spence
+    resourceVersion: "1863645"
+    selfLink: /api/v1/persistentvolumes/youthful-spence
+    uid: 6ae8ab0a-1a92-4874-b516-569062262e54
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 5Gi
+    hostPath:
+      path: /youthful-spence
+      type: ""
+    persistentVolumeReclaimPolicy: Recycle
+    volumeMode: Filesystem
+  status:
+    phase: Available
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

@@ -1,0 +1,85 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-06-15T06:48:07Z"
+    name: kubernetes
+    namespace: default
+    resourceVersion: "16947193"
+    selfLink: /api/v1/namespaces/default/endpoints/kubernetes
+    uid: dd6fc29b-7b69-4961-8e3a-dba1a21cf278
+  subsets:
+  - addresses:
+    - ip: 192.168.122.10
+    ports:
+    - name: https
+      port: 6443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"master_7f53043b-572e-48f1-8e8d-5b95f5cfaa87","leaseDurationSeconds":15,"acquireTime":"2020-06-17T05:55:41Z","renewTime":"2020-06-20T01:29:22Z","leaderTransitions":8}'
+    creationTimestamp: "2020-01-05T02:36:57Z"
+    name: kube-controller-manager
+    namespace: kube-system
+    resourceVersion: "17402094"
+    selfLink: /api/v1/namespaces/kube-system/endpoints/kube-controller-manager
+    uid: 5726717c-a167-476a-ba82-8b8df4f6d928
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-01-05T02:37:13Z"
+    labels:
+      k8s-app: kube-dns
+      kubernetes.io/cluster-service: "true"
+      kubernetes.io/name: KubeDNS
+    name: kube-dns
+    namespace: kube-system
+    resourceVersion: "17172851"
+    selfLink: /api/v1/namespaces/kube-system/endpoints/kube-dns
+    uid: 875c6b00-06a9-4180-9e1b-58c3b16ac275
+  subsets:
+  - addresses:
+    - ip: 10.244.0.18
+      nodeName: master
+      targetRef:
+        kind: Pod
+        name: coredns-5644d7b6d9-rgwm5
+        namespace: kube-system
+        resourceVersion: "17049466"
+        uid: 56d1521a-9fd4-4d4f-aec8-0fb12ae47f7f
+    - ip: 10.244.0.19
+      nodeName: master
+      targetRef:
+        kind: Pod
+        name: coredns-5644d7b6d9-m9zxt
+        namespace: kube-system
+        resourceVersion: "17049472"
+        uid: d987fc2b-28e1-40e4-b1ae-53c5f9813951
+    ports:
+    - name: dns
+      port: 53
+      protocol: UDP
+    - name: dns-tcp
+      port: 53
+      protocol: TCP
+    - name: metrics
+      port: 9153
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"master_6d1b1f64-b70c-49e8-a5be-719404406483","leaseDurationSeconds":15,"acquireTime":"2020-06-17T05:55:42Z","renewTime":"2020-06-20T01:29:23Z","leaderTransitions":7}'
+    creationTimestamp: "2020-01-05T02:36:56Z"
+    name: kube-scheduler
+    namespace: kube-system
+    resourceVersion: "17402095"
+    selfLink: /api/v1/namespaces/kube-system/endpoints/kube-scheduler
+    uid: affa5189-a2db-4071-bf12-b8f2781f5315
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

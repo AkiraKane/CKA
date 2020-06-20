@@ -1,0 +1,97 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2020-01-05T02:36:56Z"
+    name: default
+    resourceVersion: "148"
+    selfLink: /api/v1/namespaces/default
+    uid: 30025589-e149-4555-aa3c-5b1b41857de6
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2020-01-05T02:36:53Z"
+    name: kube-node-lease
+    resourceVersion: "22"
+    selfLink: /api/v1/namespaces/kube-node-lease
+    uid: 4446b60e-5d9e-4835-a697-8a3a490d29be
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2020-01-05T02:36:53Z"
+    name: kube-public
+    resourceVersion: "19"
+    selfLink: /api/v1/namespaces/kube-public
+    uid: 13c008ac-65b9-46e4-92ed-19887ce311a5
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2020-01-05T02:36:53Z"
+    name: kube-system
+    resourceVersion: "11"
+    selfLink: /api/v1/namespaces/kube-system
+    uid: f5422ab5-e82b-44a4-9007-599f02c8dfae
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2020-02-04T03:19:55Z"
+    name: pre-prod
+    resourceVersion: "3740922"
+    selfLink: /api/v1/namespaces/pre-prod
+    uid: 7c4666ea-a7de-4d4e-bc0c-fb5001a37d18
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2020-02-04T03:13:07Z"
+    name: qa
+    resourceVersion: "3740319"
+    selfLink: /api/v1/namespaces/qa
+    uid: c4fd61fe-aa82-4caa-b7df-ddd7e76ae36f
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2020-06-19T06:58:50Z"
+    name: website-frontend
+    resourceVersion: "17305774"
+    selfLink: /api/v1/namespaces/website-frontend
+    uid: cdc5b2e6-b37c-404b-bc1f-205e63b19399
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
