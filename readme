@@ -21,7 +21,7 @@ kubectl create ns pre-prod
 minikube start --profile hk8s -n 4
 
 ####新增環境變數
-vim.~/.bash_profile
+vim ~/.bash_profile
 export NO_PROXY=節點1_IP,節點2_IP,節點3_IP,節點4_IP
 source ~/.bash_profile
 

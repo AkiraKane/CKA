@@ -352,7 +352,7 @@ items:
     name: guestbook
     namespace: default
   spec:
-    replicas: 3
+    replicas: 5
     selector:
       app: nginx
     template:
@@ -582,8 +582,48 @@ items:
       test: cka
     sessionAffinity: None
     type: ClusterIP
-  status:
-    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    labels:
+      app: foo
+      exam: ep
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+            f:exam: {}
+        f:spec:
+          f:ports:
+            .: {}
+            k:{"port":80,"protocol":"TCP"}:
+              .: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector:
+            .: {}
+            f:app: {}
+            f:exam: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: kubectl
+    name: foo
+    namespace: production
+  spec:
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: foo
+      exam: ep
+    sessionAffinity: None
+    type: ClusterIP
 kind: List
 metadata:
   resourceVersion: ""
