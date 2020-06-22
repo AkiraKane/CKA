@@ -1,7 +1,7 @@
-Install minikube
+####Install minikube
+https://kubernetes.io/docs/tasks/tools/install-minikube/
 
-Install kubectl
-
+####清除cluster
 minikube delete -p fk8s
 minikube delete -p hk8s
 
