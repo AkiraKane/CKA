@@ -8,10 +8,14 @@ spec:
   selector:
     matchLabels:
       app: ds00202
+      task: ds
+      scope: all
   template:
     metadata:
       labels:
         app: ds00202
+        task: ds
+        scope: all
     spec:
       tolerations:
       - key: node-role.kubernetes.io/master

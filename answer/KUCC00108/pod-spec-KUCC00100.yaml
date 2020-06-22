@@ -3,6 +3,14 @@ kind: Pod
 metadata:
   name: lumpy-koala
 spec:
+  restartPolicy: Never
+  initContainers:
+  - name: init
+    image: busybox
+    command: ['sh', '-c', 'touch /workdir/calm.txt']
+    volumeMounts:
+    - name: vol
+      mountPath: /workdir
   containers:
   - name: lumpy-koala
     image: busybox

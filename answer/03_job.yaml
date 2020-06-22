@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: musing-shaw
+  name: musing_shaw
 spec:
   parallelism: 5
   completions: 30

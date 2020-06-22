@@ -6,18 +6,22 @@ metadata:
   name: noted
   labels:
     app: nginx
+    task: note-deploy
+    app_env_stage: test
 spec:
   replicas: 5
   selector:
     matchLabels:
       app: nginx
+      task: note-deploy
+      app_env_stage: test
   template:
     metadata:
       labels:
         app: nginx
+        task: note-deploy
+        app_env_stage: test
     spec:
       containers:
       - name: nginx
         image: nginx
-        ports:
-        - containerPort: 80

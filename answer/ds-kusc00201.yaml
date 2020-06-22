@@ -8,10 +8,14 @@ spec:
   selector:
     matchLabels:
       app: ds00201
+      task: ds
+      scope: worker
   template:
     metadata:
       labels:
         app: ds00201
+        task: ds
+        scope: worker
     spec:
       containers:
       - name: nginx
