@@ -74,10 +74,9 @@ kubectl create ns development
 ```
 
 ## 修改hk8s/hk8s.yaml
-```
 找到default-token-bqvk8字眼
-改成secrets 的名字 (kubectl get secrets)
-```
+改成secrets 的名字 `kubectl get secrets`
+
 
 ### 建置Deploy,Pod,Service
 ```
