@@ -1,8 +1,8 @@
-## Install minikube
+# Install minikube
 https://kubernetes.io/docs/tasks/tools/install-minikube/
 
 
-## fk8s lab
+# fk8s lab
 ```
 minikube start --profile fk8s -n 3
 kubectl config use-context fk8s
@@ -24,7 +24,8 @@ kubectl taint nodes fk8s node-role.kubernetes.io/master=:NoSchedule
 kubectl create ns pre-prod
 ```
 
-## hk8s lab
+
+# hk8s lab
 ```
 minikube start --profile hk8s -n 4
 kubectl config use-context hk8s
