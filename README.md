@@ -1,4 +1,4 @@
-####Install minikube
+#### Install minikube
 https://kubernetes.io/docs/tasks/tools/install-minikube/
 
 ####清除cluster
@@ -17,7 +17,7 @@ kubectl taint nodes fk8s node-role.kubernetes.io/master=:NoSchedule
 
 kubectl create ns pre-prod
 
-####hk8s lab
+#### hk8s lab
 minikube start --profile hk8s -n 4
 
 ####新增環境變數
@@ -51,3 +51,4 @@ kubectl create ns development
 改成secrets 的名字 (kubectl get secrets)
 
 kubectl apply -f hk8s/hk8s.yaml
+
