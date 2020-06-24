@@ -2,9 +2,12 @@
 https://kubernetes.io/docs/tasks/tools/install-minikube/
 
 
+---
+
+
 # fk8s lab
 ```
-minikube start --profile fk8s -n 3
+minikube start --profile fk8s -n 3  /* or add --driver virtualbox */
 kubectl config use-context fk8s
 ```
 
@@ -25,9 +28,12 @@ kubectl create ns pre-prod
 ```
 
 
+---
+
+
 # hk8s lab
 ```
-minikube start --profile hk8s -n 4
+minikube start --profile hk8s -n 4  /* or add --driver=virtualbox */
 kubectl config use-context hk8s
 ```
 
@@ -83,8 +89,20 @@ kubectl create ns development
 kubectl apply -f hk8s/hk8s.yaml
 ```
 
+
+---
+
+
+# minikube 常用指令
+
 ### 清除cluster
 ```
 minikube delete -p fk8s
 minikube delete -p hk8s
+```
+
+### 暫停運行cluster
+```
+minikube pause -p fk8s
+minikube unpause -p fk8s  /* 啟動 ＊/
 ```
